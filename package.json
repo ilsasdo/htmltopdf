@@ -2,6 +2,7 @@
   "name": "wkhtmltopdf-aas",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +11,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "puppeteer": "^23.11.1"
+    "express": "^4.21.2",
+    "puppeteer": "^23.11.1",
+    "uuid": "^11.0.3"
   }
 }

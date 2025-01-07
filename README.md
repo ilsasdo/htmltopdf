@@ -1,13 +1,17 @@
-# how to run linux/amd64 on mac os m1
+# HTML to PDF/JPG
 
+Uses [Puppeteer](https://pptr.dev/) and ChromeForTesting to produce PDFs or Images from any website.
 
-Execute:
-   ```shell 
-   softwareupdate --install-rosetta
-   colima start --profile rosetta --cpu 2 --memory 4 --disk 40 --arch aarch64 --vm-type=vz --vz-rosetta --mount-type virtiofs
-   ```
+## Create image on MacOS
 
-Execute docker with:
+```shell 
+softwareupdate --install-rosetta
+colima start --profile rosetta --cpu 2 --memory 4 --disk 40 --arch aarch64 --vm-type=vz --vz-rosetta --mount-type virtiofs
+docker build
+```
+
+## Execute on docker
+
 ```shell
 docker run -i --init --cap-add=SYS_ADMIN --rm puppeteer
 ```

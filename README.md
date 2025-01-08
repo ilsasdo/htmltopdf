@@ -15,3 +15,20 @@ docker build
 ```shell
 docker run -i --init --cap-add=SYS_ADMIN --rm puppeteer
 ```
+
+## Execute on local
+
+```shell
+npm install
+npm start
+```
+
+Sample request:
+
+```shell
+curl -X POST \
+  'http://localhost:3100/convert?url=https://www.yahoo.com/&output=pdf' \
+  -H 'Content-Type: application/json' \
+  -d '{"options": {"format": "A4", "printBackground": true}}' \
+  --output example.pdf
+```
